@@ -15,6 +15,6 @@ export class IssuesService {
   }
 
   getPendingIssues(): Issue[] {
-    return this._issues.filter(issue => !issue.completed);
+    return this.issues.filter(issue => !issue.completed);
   }
 }
