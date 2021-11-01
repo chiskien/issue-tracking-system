@@ -5,11 +5,16 @@ import {Issue} from "./issue";
   providedIn: 'root'
 })
 export class IssuesService {
-  private issues: Issue[] = [];
+  get issues(): Issue[] {
+    return this._issues;
+  }
+
+  private _issues: Issue[] = [];
 
   constructor() {
   }
+
   getPendingIssues(): Issue[] {
-    return this.issues.filter(issue => !issue.completed);
+    return this._issues.filter(issue => !issue.completed);
   }
 }
