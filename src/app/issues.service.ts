@@ -1,11 +1,13 @@
 import {Injectable} from '@angular/core';
 import {Issue} from "./issue";
+import {mockIssue} from "./mock-issue";
 
 @Injectable({
   providedIn: 'root'
 })
 export class IssuesService {
   get issues(): Issue[] {
+    this._issues = mockIssue
     return this._issues;
   }
 
