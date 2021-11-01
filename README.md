@@ -1,6 +1,11 @@
 # IssueTrackingSystem
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
+Clarity is a design system that contains a set of UX and UI guidelines for building web applications
+
+## Project overview
+
+-We will build an Angular application for managing and tracking issues using reactive forms and Clarity
+
 
 ## Development server
 
