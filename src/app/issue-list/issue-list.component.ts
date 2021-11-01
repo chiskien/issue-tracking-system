@@ -12,7 +12,9 @@ export class IssueListComponent implements OnInit {
   constructor(private issueService: IssuesService) { }
 
   ngOnInit(): void {
+    this.getIssues();
+  }
+  private getIssues():void {
     this.issues = this.issueService.getPendingIssues();
   }
-
 }
