@@ -7,13 +7,13 @@ import {FormBuilder, FormGroup} from "@angular/forms";
   styleUrls: ['./issue-report.component.scss']
 })
 export class IssueReportComponent implements OnInit {
-  formGroup: FormGroup | undefined;
+  issueForm: FormGroup | undefined;
 
   constructor(private formBuilder: FormBuilder) {
   }
 
   private createForm() {
-    this.formGroup = this.formBuilder.group({
+    this.issueForm = this.formBuilder.group({
       title: [''],
       description: [''],
       priority: [''],
