@@ -7,7 +7,7 @@ import {mockIssue} from "./mock-issue";
 })
 export class IssuesService {
   get issues(): Issue[] {
-    this._issues = mockIssue
+    this._issues = mockIssue;
     return this._issues;
   }
 
@@ -18,5 +18,10 @@ export class IssuesService {
 
   getPendingIssues(): Issue[] {
     return this.issues.filter(issue => !issue.completed);
+  }
+
+  createIssue(issue: Issue): void {
+    issue.issueNo = this.issues.length + 1;
+    this.issues.push(issue);
   }
 }
