@@ -26,4 +26,9 @@ export class IssueListComponent implements OnInit {
   private getIssues(): void {
     this.issues = this.issueService.getPendingIssues();
   }
+
+  openForm() {
+    console.log(this.showReportIssue);
+    this.showReportIssue = true;
+  }
 }
